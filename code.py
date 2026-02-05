@@ -14,7 +14,8 @@ num_features = ['Age', 'Credit Utilization Ratio', 'Payment History',
 cat_features =['Gender', 'Marital Status', 'Education Level',
                 'Employment Status', 'Type of Loan']
 
-x=df
+x=df.drop(columns='Type of Loan')
+y=df['Type of Loan']
 
 x_train,x_test,y_train,y_test=train_test_split(x,y,test_size=0.2,random_state=42)
 
